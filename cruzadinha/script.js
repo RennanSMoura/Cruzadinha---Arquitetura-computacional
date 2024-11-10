@@ -11,40 +11,40 @@ var questions_list = [
     'Qual a memória que permite ao usuário armazenar e executar os arquivos que ele está trabalhando, como carregar aplicativos, navegar pela internet, editar planilhar, etc ?',
 
 
-    'Tipo de memória não volátil que oferece dados apenas para leitura',
+    'Que memória armazena dados de forma permanente e é usada para guardar as instruções essenciais de um computador?',
 
 
-    'Tipo de memória não volátil que precisa ter seu chip exposto a luz ultravioleta para apagar seu conteúdo',
+    'Que tipo de memória permite a regravação, mas requer exposição à luz ultravioleta para apagar seu conteúdo?',
 
 
-    'Tipo particular de EEPROM que mantém as informações armazenadas sem a necessidade de uma fonte de energia elétrica',
+    'Que tipo de memória não volátil é conhecida por sua capacidade de ser escrita e apagada em grandes blocos de dados de uma vez?',
 
 
-    'Tipo de memória que precisa ter seu conteúdo copiado na RAM para poder ser executado pela CPU',
+    'Que tipo de memória é responsável por armazenar dados de longo prazo e deve ter seu conteúdo carregado na RAM para que a CPU possa processá-los?',
 
 
-    'Permite que periféricos acessem diretamente a RAM sem ocupar processamento',
+    'Qual tecnologia permite que dispositivos se comuniquem diretamente com a memória, sem a intervenção do processador?',
 
 
-    'Também conhecido como Slave Select (SS). Usado para selecionar um ou um conjunto de circuitos que estão conectados no computador',
+    'O que habilita a memória de um dispositivo e permite que suas portas de I/O sejam liberadas para a operação desejada, em muitos circuitos integrados?',
 
 
-    'Grupo de linhas ou trilhas usadas para se referir a um endereço físico na memória. O número de trilhas determina a quantidade de endereços na memória física',
+    'Qual barramento é responsável por identificar a localização exata onde os dados devem ser acessados pela CPU em um computador?',
 
 
-    'Também chamado de Memory Bus. É responsável para carregar os dados.',
+    'Qual barramento é responsável por transportar as informações entre os dispositivos em um computador?',
 
 
-    'Modelo de processador desenvolvido pela Intel qu teve sua primeira versão lançada em setembro de 2009',
+    'Lançado em 2009, com um nome que indica equilíbrio entre desempenho e preço, qual linha de processadores tem núcleos suficientes para muitas tarefas, mas nem sempre conta com uma tecnologia que acelera múltiplas tarefas simultâneas?',
 
 
-    'Modelo de processador desenvolvido pela Intel qu teve sua primeira versão lançada em novembro de 2008',
+    'Meu Turbo Boost é mais avançado e sempre conto com mais núcleos para melhorar o desempenho em tarefas pesadas. Quem sou eu?',
     
     
-    'Tipo de processador que possui dois processadores ou melhor dizendo ‘dois centros, núcleos ou cores de execução‘ no mesmo circuito integrado.  Cada core tem sua própria memória cash e controlador o que permite que funcione mais efetivamente do que um processador single',
+    'Em uma época onde a velocidade era importante, fui criado para ser uma escolha acessível com dois núcleos, sou rápido o suficiente para realizar duas tarefas ao mesmo tempo, mas minha capacidade de processamento é limitada. Quem sou eu?',
 
 
-    'Segue o mesmo princípio de um dual-core, mas agora em teoria tem o dobro da capacidade de processamento'
+    'Quando o trabalho se multiplica e as tarefas aumentam, sou aquele que divide a carga. Com quatro núcleos a minha disposição, sou eficiente em tudo que faço. Embora existam processadores com mais núcleos, ainda me considero o intermediário perfeito entre potência e custo. Quem sou eu, com quatro mentes trabalhando em sincronia?'
 ];
 
 var filledCell = [2, 20, 38, 133, 134, 135, 59, 77, 95, 113, 131, 149,
@@ -290,7 +290,7 @@ function start() {
     cont_correctAnswer = 0;
     bt_start.style.display = 'none';
     bt_destroyGame.style.display = 'block';
-    div_questions.style.display = 'block';
+    div_questions.style.display = '';
     div_information.innerHTML = '';
     renderGrid();
     gameSequence();
@@ -367,13 +367,13 @@ function gameSequence() {
 
 
 function pontuation() {
-    div_information.style.display = 'block';
+    div_information.style.display = '';
 
     div_information.innerHTML = '<h1 style="text-align: center;">Parabéns!!</h1><br><br><p style="text-align: center;">Você finalizou o jogo</p><br><br>';
 }
 
 function renderGrid() {
-    var tableGame = '<table id="gridGame" cellspacing=0 cellpadding=0>';
+    var tableGame = '<table style="padding:10px", width:100% id="gridGame" cellspacing=0 cellpadding=0>';
 
     // &nbsp its used to set null value to a cell
     var cellContent_tableGame = '&nbsp';
@@ -424,15 +424,15 @@ function verify() {
         // answer = answer.toLowerCase();
         if (answer == special_words[cont_correctAnswer]) {
             div_verifiedAnswer.classList.add('correctAnswer');
-            div_verifiedAnswer.innerHTML = '<br>Resposta Correta!';
+            div_verifiedAnswer.innerHTML = 'Resposta Correta!';
             cont_correctAnswer++;
         }
         else {
             div_verifiedAnswer.classList.add('wrongAnswer');
-            div_verifiedAnswer.innerHTML = '<br>Resposta Incorreta, tente novamente';
+            div_verifiedAnswer.innerHTML = 'Resposta Incorreta, tente novamente';
         }
         setTimeout(function () {
-            div_verifiedAnswer.style.display = 'block';
+            div_verifiedAnswer.style.display = '';
         }, 500);
 
         setTimeout(function () {
@@ -446,3 +446,5 @@ function verify() {
         alert('Por Favor, digite uma resposta na caixa de texto');
     }
 }
+
+
