@@ -1,0 +1,360 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Jersey+10&family=Rubik+Wet+Paint&family=Russo+One&family=Saira:ital,wght@0,100..900;1,100..900&display=swap");
+
+:root {
+    --padding: 20px 70px;
+  }
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+html {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  background-image: url("../assets/fundo.png");
+  background-size: cover;         /* Faz a imagem ocupar todo o espaço */
+  background-repeat: no-repeat;   /* Impede que a imagem se repita */
+  background-position: center;  
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows:min-content 1fr min-content;
+  align-items: center;
+  justify-items: center;
+  align-items: center;
+  overflow-x: hidden;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  padding: var(--padding);
+ 
+}
+
+header h1 {
+  text-align: center;
+  font-size: 3rem;
+  color: #ffffff;
+}
+
+main {
+  display: flex;
+  width: 90%;
+  
+  padding: var(--padding);
+  background-color: #5616be36;
+  border-radius: 10px;
+  justify-content: center;
+
+  & .questions {
+    width: 60%;
+  }
+
+  & .containerpg2 {
+    width: 40%;
+  }
+}
+
+.containerpg2 table {
+  width: 100%;
+}
+
+.questions {
+  display: flex;
+  flex-direction: column;
+  padding: 4%;
+
+  & span {
+    color: #ffffff;
+    font-size: 30px;
+  }
+
+  & input {
+    width: 80%;
+    height: 70px;
+    font-size: 50px;
+    padding: 10px;
+    margin-top: 5%;
+  }
+  & .botoes {
+    display: flex;
+    margin-top: 5%;
+    gap: 20px;
+    & #button_verify {
+      background-color: #ffffff;
+      color: purple;
+      border-radius: 10px;
+    }
+
+    & .btn_encerrarjogo {
+      background-color: #ffffff;
+      color: purple;
+      border-radius: 10px;
+    }
+  }
+}
+
+table {
+  border: 1px #ffffff solid;
+  font-size: 25px;
+}
+
+tr {
+  border: 1px #4b0088 solid;
+}
+
+td {
+  border: 1px #4b0088 solid;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  vertical-align: center;
+}
+
+button {
+    background-color: #eee;
+    color: #19002c;
+    font-size: 3rem;
+    border-radius: 15px;
+    line-height: 1;
+    padding: 10px 50px 5px 50px;
+    align-items: center;
+    height: fit-content;
+    width: fit-content;
+    cursor: pointer;
+}
+
+.container {
+  width: 1100px;
+  margin: auto;
+}
+
+.deadCell {
+  background-color: #4b0088;
+}
+.availableCell {
+  background-color: #ffffff;
+}
+
+footer {
+  height: 80px;
+  color: #ffffff;
+  font-size: 15px;
+  margin-bottom: 0;
+  padding: 0;
+  bottom: 0;
+  padding: var(--padding);
+}
+footer p {
+  text-align: center;
+}
+#div_information {
+  margin: auto;
+  color: #ffffff;
+  font-size: 30px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 30px;
+}
+
+#div_verifiedAnswer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 70px;
+  margin-top: 5%;
+  text-align: center;
+  font-size: 30px;
+  border-radius: 10px;
+}
+.correctAnswer {
+  background-color: #58d68d;
+  color: #196f3d;
+  border: 1px #196f3d solid;
+}
+.wrongAnswer {
+  background-color: #ec7063;
+  color: #7b241c;
+  border: 1px #7b241c solid;
+}
+
+#cell_11.deadCell,
+#cell_12.deadCell,
+#cell_13.deadCell,
+#cell_14.deadCell,
+#cell_15.deadCell,
+#cell_16.deadCell,
+#cell_17.deadCell,
+
+
+#cell_29.deadCell,
+#cell_30.deadCell,
+#cell_31.deadCell,
+#cell_32.deadCell,
+#cell_33.deadCell,
+#cell_34.deadCell,
+#cell_35.deadCell,
+
+/* Células de 46 a 53 */
+
+#cell_47.deadCell,
+#cell_48.deadCell,
+#cell_49.deadCell,
+#cell_50.deadCell,
+#cell_51.deadCell,
+#cell_52.deadCell,
+#cell_53.deadCell,
+
+/* Células de 64 a 71 */
+
+#cell_65.deadCell,
+#cell_66.deadCell,
+#cell_67.deadCell,
+#cell_68.deadCell,
+#cell_69.deadCell,
+#cell_70.deadCell,
+#cell_71.deadCell,
+
+/* Células de 82 a 89 */
+
+#cell_83.deadCell,
+#cell_84.deadCell,
+#cell_85.deadCell,
+#cell_86.deadCell,
+#cell_87.deadCell,
+#cell_88.deadCell,
+#cell_89.deadCell,
+
+/* Células de 100 a 107 */
+
+#cell_101.deadCell,
+#cell_102.deadCell,
+#cell_103.deadCell,
+#cell_104.deadCell,
+#cell_105.deadCell,
+#cell_106.deadCell,
+#cell_107.deadCell,
+
+/* Repetição do padrão até 323 */
+
+#cell_119.deadCell,
+#cell_120.deadCell,
+#cell_121.deadCell,
+#cell_122.deadCell,
+#cell_123.deadCell,
+#cell_124.deadCell,
+#cell_125.deadCell,
+
+
+#cell_137.deadCell,
+#cell_138.deadCell,
+#cell_139.deadCell,
+#cell_140.deadCell,
+#cell_141.deadCell,
+#cell_142.deadCell,
+#cell_143.deadCell,
+
+
+#cell_155.deadCell,
+#cell_156.deadCell,
+#cell_157.deadCell,
+#cell_158.deadCell,
+#cell_159.deadCell,
+#cell_160.deadCell,
+#cell_161.deadCell,
+
+
+#cell_173.deadCell,
+#cell_174.deadCell,
+#cell_175.deadCell,
+#cell_176.deadCell,
+#cell_177.deadCell,
+#cell_178.deadCell,
+#cell_179.deadCell,
+
+
+#cell_191.deadCell,
+#cell_192.deadCell,
+#cell_193.deadCell,
+#cell_194.deadCell,
+#cell_195.deadCell,
+#cell_196.deadCell,
+#cell_197.deadCell,
+
+
+#cell_209.deadCell,
+#cell_210.deadCell,
+#cell_211.deadCell,
+#cell_212.deadCell,
+#cell_213.deadCell,
+#cell_214.deadCell,
+#cell_215.deadCell,
+
+
+#cell_227.deadCell,
+#cell_228.deadCell,
+#cell_229.deadCell,
+#cell_230.deadCell,
+#cell_231.deadCell,
+#cell_232.deadCell,
+#cell_233.deadCell,
+
+
+#cell_245.deadCell,
+#cell_246.deadCell,
+#cell_247.deadCell,
+#cell_248.deadCell,
+#cell_249.deadCell,
+#cell_250.deadCell,
+#cell_251.deadCell,
+
+
+#cell_263.deadCell,
+#cell_264.deadCell,
+#cell_265.deadCell,
+#cell_266.deadCell,
+#cell_267.deadCell,
+#cell_268.deadCell,
+#cell_269.deadCell,
+
+
+#cell_281.deadCell,
+#cell_282.deadCell,
+#cell_283.deadCell,
+#cell_284.deadCell,
+#cell_285.deadCell,
+#cell_286.deadCell,
+#cell_287.deadCell,
+
+
+#cell_299.deadCell,
+#cell_300.deadCell,
+#cell_301.deadCell,
+#cell_302.deadCell,
+#cell_303.deadCell,
+#cell_304.deadCell,
+#cell_305.deadCell,
+
+
+#cell_317.deadCell,
+#cell_318.deadCell,
+#cell_319.deadCell,
+#cell_320.deadCell,
+#cell_321.deadCell,
+#cell_322.deadCell,
+#cell_323.deadCell {
+  display: none;
+}

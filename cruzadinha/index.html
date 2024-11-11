@@ -1,68 +1,37 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="style.css">
-    <title>Palavras-Cruzadas & Carlos Santana</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Palavras-Cruzadas</title>
+    <link rel="stylesheet" href="./css/style.css">
 </head>
 
 <body>
+
     <header>
-        <div class="container">
-            <h1>Palavras-Cruzadas</h1>
-            <div class="div_button">
-                <center>
-                    <button class="button" id="bt_start" onclick="start()">Começar o Jogo</button>
-                </center>
-            </div>
-        </div>
-    </header>
-
+        
+            <img class="logo" src="./assets/logo.svg" alt="">
+            <h1>Palavras Cruzadas</h1>
+        
+            </header>
     <main>
-        <div style="display: none" class="questions" id="div_questions">
-            <span id="span_questionText">Vamos encontrar as esferas do dragao</span>
-            <input type="text" id="input_answer" placeholder="Sua Reposta">
-            <div class="botoes">
-                <button id="button_verify" onclick="verify()" class="button">Verificar</button>
-                <button class="btn_encerrarjogo" style="display: none" id="bt_destroyGame" onclick="destroyGrid()">Encerrar o Jogo</button>
-            </div>
-            <div style="display: none" id="div_verifiedAnswer">
-                <h3>Resposta Correta</h3>
-            </div>
+        <div class="subtitle_container">
+            <h2>Lendas</h2>
+            <h3>nunca</h3>
+            <h6>desistem</h6>
         </div>
-        <div class="containerpg2">
-            <div id="div_game">
-                <div id="div_information">
-                    <h2>Intruções do Jogo</h2>
-                    <p>
-                        Clique em "Começar o Jogo" para iniciar uma partida
-                        Perguntas serão exibidas na parte inferior do quadro
-                        Insira a sua resposta na caixa de texto e clique em "Verificar" para conferir a sua
-                        resposta
-                        A partida acaba quando as 16 questões forem respondidas
-                    </p>
-                </div>
-                <div id="div_canvasCruzada"></div>
-            </div>
-        </div>
-        </div>
+        <img src="./assets/avatar.png" alt="" id="avatar">
+        <a class="btn_jogar" href="./cruzadinha.html">Jogar</a>
     </main>
+    <footer>
+        <p>Leonardo Sardinha Santana - leonardo.ssantana@sptech.school</p>
+        <p>1º ADS A - 2024</p>
+        <p>Rennan de Souza Moura - rennan.moura@sptech.school</p>
+        
+    </footer>
 
-    <!-- <footer>
-        <div class="container">
-            <p>Developed by Carlos Santana
-                RA: 01201095
-                1ADS-A
-            </p>
-        </div>
-        ADAPTADO POR LEONARDO SARDINHA E RENNAN MOURA
-    </footer> -->
 </body>
 
 </html>
-
-<script src="script.js"></script>

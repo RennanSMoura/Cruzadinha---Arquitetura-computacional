@@ -1,0 +1,97 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Jersey+10&family=Rubik+Wet+Paint&family=Russo+One&family=Saira:ital,wght@0,100..900;1,100..900&display=swap");
+
+:root {
+  --padding: 20px 70px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #eee;
+  text-decoration: none;
+}
+
+html {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("../assets/galaxy-bg.png");
+  background-repeat: no-repeat;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 15% 85% 15%;
+}
+
+header {
+ 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  padding: var(--padding);
+  background: linear-gradient(#19002c 0%, #1d145879 100%);
+}
+
+.logo {
+  width: 70px;
+}
+
+
+main {
+  
+  padding: var(--padding);
+  display: flex;
+  gap: 50px;
+  justify-content:center;
+  flex-direction: column;
+  position: relative;
+  
+}
+
+#avatar{
+    height: 90%;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+.subtitle_container{
+    font-size: 6rem;
+    line-height: 1;
+}
+
+.btn_jogar {
+    background-color: #eee;
+    color: #19002c;
+    font-size: 3rem;
+    border-radius: 15px;
+    line-height: 1;
+    padding: 10px 50px 5px 50px;
+    align-items: center;
+    height: fit-content;
+    width: fit-content;
+  
+   
+}
+
+.btn_jogar:hover{
+    scale: 1.2;
+    transition: ease-in 1s;
+}
+
+footer {
+  padding: var(--padding);
+  background: linear-gradient(0deg, #19002c 0%, #1d145879 100%);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
